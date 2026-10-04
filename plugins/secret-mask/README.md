@@ -3,9 +3,7 @@
 Masks secrets in tool output, file reads and prompts before Claude reads them. Claude sees
 `‹secret:1›`, and your screen still shows the real value.
 
-```
-psql: error: connection to postgres://deploy:‹secret:1›@localhost/app failed
-```
+![Your terminal shows the secret, Claude reads ‹secret:1›](demo.svg)
 
 A `PreToolUse` hook could only block that command. This lets it run and masks the output.
 
@@ -38,7 +36,8 @@ The status line shows `🔒 3 masked` once something has been masked.
 - Token-like values assigned to secret names, like `apiKey = "..."` or `SESSION_SECRET=...`.
 
 Commit hashes, UUIDs, paths, `process.env.X` and placeholders like `${DB_PASS}` are left alone.
-It makes no network or model calls, and values are only held in memory.
+It makes no network or model calls and has no dependencies. Values are only held in memory.
+The whole thing is about 320 lines in [`hooks/`](hooks), with 23 tests.
 
 ## Limits
 
