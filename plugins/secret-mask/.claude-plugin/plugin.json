@@ -1,0 +1,16 @@
+{
+  "name": "secret-mask",
+  "version": "0.1.0",
+  "description": "Masks secrets (API keys, tokens, passwords, .env values) in tool output and prompts before Claude reads them",
+  "author": {
+    "name": "mashabek"
+  },
+  "homepage": "https://github.com/mashabek/claude-mods/tree/main/plugins/secret-mask",
+  "repository": "https://github.com/mashabek/claude-mods",
+  "keywords": [
+    "security",
+    "secrets",
+    "redaction",
+    "mod"
+  ]
+}

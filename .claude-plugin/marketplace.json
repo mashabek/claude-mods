@@ -1,0 +1,15 @@
+{
+  "name": "claude-mods",
+  "description": "Mods for Claude Code: plugins built on the function-hooks API",
+  "owner": {
+    "name": "mashabek",
+    "url": "https://github.com/mashabek"
+  },
+  "plugins": [
+    {
+      "name": "secret-mask",
+      "source": "./plugins/secret-mask",
+      "description": "Masks secrets in tool output and prompts before Claude reads them"
+    }
+  ]
+}
